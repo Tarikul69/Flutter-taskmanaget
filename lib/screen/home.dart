@@ -6,7 +6,7 @@ class home extends StatefulWidget {
 
   @override
   State<home> createState() => _homeState();
-  MaterialStateProperty;
+
 }
 
 class _homeState extends State<home> {
@@ -16,59 +16,18 @@ class _homeState extends State<home> {
       home: Scaffold(
         appBar: topbar(),
         body: SingleChildScrollView(
-          child: Stack(
+          child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: 1200,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Card(
-                      color: Colors.white70,
-                      child: Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Lorem Ipsum is simply dummy",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text("data"),
-                            Text("Date: 01/02/2023"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Completed",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  style:  ButtonStyle(
-                                    shape:
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.delete,
-                                ),
-                                Icon(
-                                  Icons.delete,
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+
             ],
           ),
         ),
@@ -76,3 +35,4 @@ class _homeState extends State<home> {
     );
   }
 }
+
