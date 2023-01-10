@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanager/screen/home.dart';
 import 'screen/splash.dart';
+import 'screen/updateprofile.dart';
+
 void main() {
-  runApp(MaterialApp(
-       home: MyApp(),
-  ),
+  runApp(
+    const MaterialApp(
+      home: home(),
+    ),
   );
 }
 
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: splash(),

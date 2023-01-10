@@ -28,18 +28,22 @@ class _pinverificationState extends State<pinverification> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SafeArea(child: Padding(
-                  padding: EdgeInsets.fromLTRB(32, 5, 32, 5),
-                  child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("PIN Verification", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                      Text("A six digit verification pin will send to your email address"),
-
-                    ],
-
+                SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(32, 5, 32, 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "PIN Verification",
+                          style: TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                            "A six digit verification pin will send to your email address"),
+                      ],
+                    ),
                   ),
-                ),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(32, 5, 32, 5),
@@ -58,7 +62,7 @@ class _pinverificationState extends State<pinverification> {
                           fieldWidth: 40,
                           activeFillColor: Colors.white,
                         ),
-                        animationDuration: Duration(milliseconds: 300),
+                        animationDuration: const Duration(milliseconds: 300),
                         backgroundColor: Colors.blue.shade50,
                         enableActiveFill: true,
                         //controller: textEditingController,
@@ -66,36 +70,45 @@ class _pinverificationState extends State<pinverification> {
                           print("Completed");
                         },
 
-                        appContext: context, onChanged: (String value) {  },
+                        appContext: context, onChanged: (String value) {},
                       ),
                     ],
                   ),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
-                    child: ElevatedButton(
-                        onPressed: (){}, child:
-                    Text("Verify"),
-                    ),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text("Verify"),
+                  ),
                 ),
                 Column(
-
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Have account?", style: TextStyle(fontWeight: FontWeight.bold,),),
-                        TextButton(onPressed: (){}, child: Text("Sign in", style: TextStyle(fontWeight: FontWeight.bold,),),
+                        const Text(
+                          "Have account?",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Sign in",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ],
                     )
                   ],
                 )
               ],
-
             ),
-
           ],
         ),
       ),

@@ -10,13 +10,12 @@ class registration extends StatefulWidget {
 }
 
 class _registrationState extends State<registration> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold (
-        body:  Stack(
+      home: Scaffold(
+        body: Stack(
           children: [
             SvgPicture.asset(
               "assets/images/background.svg",
@@ -26,81 +25,96 @@ class _registrationState extends State<registration> {
             ),
             SafeArea(
               child: Padding(
-                padding:  EdgeInsets.all(32.0),
-                child:  Column(
+                padding: EdgeInsets.all(32.0),
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Join With Us", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,),),
-                    SizedBox(height: 20,),
-                    TextField(
-                            decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: "Email"
-                        ),
-                      ),
-                    SizedBox(height: 12,),
-                    TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "First Name"
+                    const Text(
+                      "Join With Us",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 12,),
-                    TextField(
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "Last Name",
+                          border: OutlineInputBorder(), hintText: "Email"),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(), hintText: "First Name"),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: "Last Name",
                       ),
                     ),
-                    SizedBox(height: 12,),
-                    TextField(
-                      decoration: InputDecoration(
-
-                          border: OutlineInputBorder(),
-                          hintText: "Mobile"
-                      ),
+                    const SizedBox(
+                      height: 12,
                     ),
-                    SizedBox(height: 12,),
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "Password"
-                      ),
+                          border: OutlineInputBorder(), hintText: "Mobile"),
                     ),
-                    SizedBox(height: 12,),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(), hintText: "Password"),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     SizedBox(
                       height: 50,
-                        width: 1000,
-                        child: ElevatedButton(
-                            onPressed: (){},
-                            child: Icon(Icons.arrow_circle_right_outlined),
-                        ),
+                      width: 1000,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Icon(Icons.arrow_circle_right_outlined),
+                      ),
                     ),
-                    SizedBox(height: 8,),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Have account?", style: TextStyle(fontWeight: FontWeight.bold),),
-                        TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const login()
-                          ),
-                          );
-                        }, child: Text("Sign in"),
+                        const Text(
+                          "Have account?",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const login()),
+                            );
+                          },
+                          child: const Text("Sign in"),
                         )
                       ],
                     ),
-
                   ],
                 ),
               ),
             ),
-
-
           ],
         ),
-       ),
+      ),
     );
   }
 }
