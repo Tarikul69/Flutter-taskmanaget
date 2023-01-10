@@ -6,7 +6,8 @@ import 'screen/updateprofile.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: home(),
+      //home: home(),
+      home: MyApp(),
     ),
   );
 }
