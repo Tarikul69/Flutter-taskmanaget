@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanager/screen/completed.dart';
+import 'package:taskmanager/screen/home.dart';
+import 'package:taskmanager/screen/newtask.dart';
 
 AppBar topbar() {
   return AppBar(
@@ -19,7 +22,7 @@ AppBar topbar() {
     backgroundColor: Colors.green[400],
   );
 }
-
+//BottomnavigationBar
 
 //Card
 class card extends StatelessWidget {
@@ -83,3 +86,47 @@ class card extends StatelessWidget {
     );
   }
 }
+
+//Bottom navigation bar
+class reuseablebottomnavigationbar extends StatelessWidget {
+  const reuseablebottomnavigationbar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      onTap: (value) {
+        if (value == 0)
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => home()));
+        if (value == 1)
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => completed()));
+        if (value == 2)
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => newtask()));
+        if (value == 3)
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => home()));
+      },
+      elevation: 10,
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: Colors.green,
+
+      //selectedLabelStyle: Sele,
+      items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.task_outlined),
+          label: "New Task",
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.task), label: "Completed"),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.task_outlined), label: "New Task"),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.task_outlined), label: "Progress"),
+      ],
+    );
+  }
+}
+

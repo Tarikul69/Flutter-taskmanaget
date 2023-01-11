@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskmanager/screen/addnewtask.dart';
 import 'package:taskmanager/widgets.dart/tools.dart';
 
 class home extends StatefulWidget {
@@ -6,7 +7,6 @@ class home extends StatefulWidget {
 
   @override
   State<home> createState() => _homeState();
-
 }
 
 class _homeState extends State<home> {
@@ -27,12 +27,18 @@ class _homeState extends State<home> {
               card(),
               card(),
               card(),
-
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.green[400],
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const addnewtask()));
+          },
+          child: Icon(Icons.add),
+        ),
+        bottomNavigationBar: reuseablebottomnavigationbar(),
       ),
     );
   }
 }
-

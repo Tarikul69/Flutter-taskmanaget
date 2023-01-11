@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taskmanager/screen/home.dart';
 import 'package:taskmanager/screen/registration.dart';
 import 'package:taskmanager/screen/setpassword.dart';
 
@@ -75,7 +76,7 @@ class _loginState extends State<login> {
                       width: 1000,
                       child: ElevatedButton(
                           onPressed: (){
-
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => home()));
                           },
                           child: Icon(Icons.arrow_circle_right_outlined, size: 30,),
 
