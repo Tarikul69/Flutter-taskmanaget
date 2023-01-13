@@ -4,8 +4,14 @@ import 'package:taskmanager/screen/home.dart';
 import 'package:taskmanager/screen/newtask.dart';
 
 AppBar topbar() {
+  return appBar12;
+}
+
+AppBar get appBar12 {
   return AppBar(
-    title: const ListTile(
+  title: InkWell(
+
+    child: const ListTile(
       contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
         backgroundColor: Colors.grey,
@@ -19,8 +25,9 @@ AppBar topbar() {
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
     ),
-    backgroundColor: Colors.green[400],
-  );
+  ),
+  backgroundColor: Colors.green[400],
+);
 }
 //BottomnavigationBar
 
